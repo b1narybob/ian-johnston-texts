@@ -1,0 +1,248 @@
+/* ================================================================
+   Ian Johnston — Texts & Translations
+   Clean, readable, academic style
+   ================================================================ */
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --clr-bg:        #fdfcf8;
+  --clr-text:      #2c2c2c;
+  --clr-heading:   #1a1a1a;
+  --clr-accent:    #3b5998;
+  --clr-accent-hk: #2d4373;
+  --clr-muted:     #6b6b6b;
+  --clr-border:    #e0ddd6;
+  --clr-card-bg:   #ffffff;
+  --font-body:     "Georgia", "Times New Roman", serif;
+  --font-ui:       "Segoe UI", system-ui, -apple-system, sans-serif;
+  --max-width:     960px;
+  --spacing:       1.5rem;
+}
+
+html { scroll-behavior: smooth; font-size: 17px; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---- Header ---- */
+header {
+  background: var(--clr-heading);
+  color: #fff;
+  padding: 2.5rem 0 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--font-ui);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+header .tagline {
+  font-size: 1.05rem;
+  color: #c8c8c8;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+nav a:hover { border-bottom-color: #fff; }
+
+/* ---- Sections ---- */
+section { padding: 2.5rem 0; }
+
+section h2 {
+  font-family: var(--font-ui);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--clr-heading);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--clr-border);
+}
+
+.section-note {
+  color: var(--clr-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* ---- Intro ---- */
+#intro p { margin-bottom: 1rem; font-size: 1.02rem; }
+
+.epigraph {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--clr-accent);
+  background: #f4f2ed;
+  font-style: italic;
+  color: var(--clr-muted);
+  line-height: 1.8;
+}
+
+/* ---- Author Groups ---- */
+.author-group {
+  margin-bottom: 1.75rem;
+}
+
+.author-group h3 {
+  font-family: var(--font-ui);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--clr-accent-hk);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.4rem 1.5rem;
+}
+
+.text-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.text-list li::before {
+  content: "📄";
+  position: absolute;
+  left: -0.1rem;
+  font-size: 0.75rem;
+  top: 0.05rem;
+}
+
+.text-list a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.15s;
+}
+
+.text-list a:hover {
+  color: var(--clr-accent-hk);
+  text-decoration: underline;
+}
+
+/* ---- Lecture Grid ---- */
+.lecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.lecture-category {
+  background: var(--clr-card-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: 6px;
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+.lecture-category h3 {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-heading);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.lecture-category ul {
+  list-style: none;
+}
+
+.lecture-category li {
+  margin-bottom: 0.45rem;
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.lecture-category li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--clr-accent);
+  font-weight: 700;
+}
+
+.lecture-category a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  transition: color 0.15s;
+}
+
+.lecture-category a:hover {
+  color: var(--clr-accent-hk);
+  text-decoration: underline;
+}
+
+/* ---- About ---- */
+#about p { margin-bottom: 0.85rem; }
+
+.dedication {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--clr-muted);
+  text-align: center;
+}
+
+/* ---- Footer ---- */
+footer {
+  background: var(--clr-heading);
+  color: #aaa;
+  text-align: center;
+  padding: 1.25rem 0;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  margin-top: 1rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  html { font-size: 15px; }
+  header h1 { font-size: 1.7rem; }
+  nav { gap: 1rem; }
+  .text-list { grid-template-columns: 1fr; }
+  .lecture-grid { grid-template-columns: 1fr; }
+}
