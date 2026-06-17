@@ -105,6 +105,16 @@ section h2 {
 /* ---- Intro ---- */
 #intro p { margin-bottom: 1rem; font-size: 1.02rem; }
 
+.dedication-photo {
+  text-align: center;
+  margin: 1.25rem 0;
+}
+
+.dedication-photo img {
+  border: 1px solid var(--clr-border);
+  border-radius: 4px;
+}
+
 .epigraph {
   margin: 1.75rem 0;
   padding: 1.25rem 1.5rem;
