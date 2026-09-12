@@ -1,15 +1,17 @@
 # johnstoniatexts
 
-A clean, static website hosting Ian Johnston's translations of Greek drama and his
+A clean, static website hosting Ian Johnston's translations of classical works and his
 lectures/essays. Designed for easy hosting on **GitHub Pages**.
 
 ## About
 
 Ian Johnston is an emeritus professor at Vancouver Island University, Nanaimo, British
-Columbia, Canada. This site hosts his translations of works by **Aeschylus** and
-**Aristophanes**, plus links to his extensive collection of lectures and essays.
+Columbia, Canada. This site hosts his translations of **Homer** and **Lucretius**, plus
+his extensive collection of lectures and essays on Greek and Roman studies,
+Shakespeare, philosophy and political thought, literature, science, religion, and more.
 
-All texts are freely available for educational, artistic, and personal use.
+All texts are freely available for educational, artistic, and personal use. Commercial
+publishing is also permitted without permission and without charge.
 
 ## Contact
 
@@ -17,41 +19,44 @@ For comments or questions please contact **johnstoi.ian@gmail.com**.
 
 ## Deploy to GitHub Pages
 
-1. Create a new GitHub repository (e.g., `ian-johnston-texts`)
-2. Upload the contents of this folder to the repository:
-   ```
-   ├── index.html
-   ├── style.css
-   ├── .nojekyll
-   ├── pdfs/
-   │   ├── AESCHYLUS_agamemnon.pdf
-   │   ├── AESCHYLUS_eumenides.pdf
-   │   ├── ...
-   │   └── ARISTOPHANES_peace.pdf
-   └── README.md
-   ```
-3. Go to **Settings → Pages** in the repository
-4. Under "Source", select **Deploy from a branch**
-5. Choose the `main` branch and `/ (root)` folder
-6. Click **Save**
+1. Push this repository to GitHub (already at `b1narybob/ian-johnston-texts`)
+2. Go to **Settings → Pages** in the repository
+3. Under "Source", select **Deploy from a branch**
+4. Choose the `main` branch and `/ (root)` folder
+5. Click **Save**
 
-Your site will be live at `https://<your-username>.github.io/<repo-name>/`.
+Your site will be live at `https://b1narybob.github.io/ian-johnston-texts/`.
 
 ## Structure
 
-- **Translations** — PDFs of Aeschylus and Aristophanes plays, organized by author
-- **Lectures & Essays** — Links to ~100+ lectures organized by category:
-  - Greek & Roman Studies
-  - Shakespeare (chronological order)
-  - Philosophy & Political Thought
-  - Literature
-  - Science, Religion & Miscellaneous
-- **Local HTML/PDF** — Some lectures are also hosted locally (files prefixed `on_`)
+```
+├── index.html          — home page: intro, translations, lectures & essays, about
+├── style.css           — site stylesheet
+├── .nojekyll           — disables Jekyll processing on GitHub Pages
+├── geoffrey.bmp        — dedication photo
+├── pdfs/               — primary translation PDFs (Homer, Lucretius)
+│   ├── HOMER_iliadall.pdf
+│   ├── HOMER_iliadabridged.pdf
+│   ├── HOMER_odysseyall.pdf
+│   ├── HOMER_odysseyabridged.pdf
+│   └── LUCRETIUS_natureofthings.pdf
+└── johnstoniatexts/    — lecture/essay texts mirrored locally (HTML, PDF, RTF)
+    └── on_*.html, on_*.pdf, on_*.rtf
+```
+
+- **Translations** — PDFs of Johnston's Homer translations (Iliad and Odyssey, complete
+  and abridged) and his Lucretius translation (*On the Nature of Things*), plus an RTF
+  of his Homer translations. Aeschylus and Aristophanes translation PDFs will be added
+  under `pdfs/` as they become available.
+- **Lectures & Essays** — ~90 lectures organized by category (Greek & Roman Studies,
+  Shakespeare, Philosophy & Political Thought, Literature, Science/Religion/Miscellaneous).
+  Most lectures link to the original `johnstoniatexts.x10host.com` pages; where a local
+  copy exists it is linked as "(Local HTML / PDF / RTF)" alongside it.
+- The site is fully static — no JavaScript dependencies, no build step needed.
 
 ## Notes
 
-- Lecture/essay links point to the original `johnstoniatexts.x10host.com` URLs.
-  If those go offline, you may want to mirror that content as well.
-- PDFs are stored locally and open directly in the browser.
-- Some lectures are also available as local HTML/PDF files (prefixed `on_`).
-- The site is fully static — no JavaScript dependencies, no build step needed.
+- Local lecture files in `johnstoniatexts/` are mirrored verbatim from the author's
+  Dropbox archive; their contents are not edited.
+- Some `johnstoniatexts.x10host.com` links may go offline over time; the local copies
+  preserve the most important lectures regardless.
