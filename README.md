@@ -48,15 +48,14 @@ Your site will be live at `https://b1narybob.github.io/ian-johnston-texts/`.
   and abridged) and his Lucretius translation (*On the Nature of Things*), plus an RTF
   of his Homer translations. Aeschylus and Aristophanes translation PDFs will be added
   under `pdfs/` as they become available.
-- **Lectures & Essays** — ~90 lectures organized by category (Greek & Roman Studies,
-  Shakespeare, Philosophy & Political Thought, Literature, Science/Religion/Miscellaneous).
-  Most lectures link to the original `johnstoniatexts.x10host.com` pages; where a local
-  copy exists it is linked as "(Local HTML / PDF / RTF)" alongside it.
+- **Lectures & Essays** — ~60 lectures and essays organized by category (Greek & Roman
+  Studies, Shakespeare, Philosophy & Political Thought, Literature,
+  Science/Religion/Miscellaneous), all hosted locally as HTML, PDF, or RTF files.
 - The site is fully static — no JavaScript dependencies, no build step needed.
 
 ## Notes
 
 - Local lecture files in `johnstoniatexts/` are mirrored verbatim from the author's
   Dropbox archive; their contents are not edited.
-- Some `johnstoniatexts.x10host.com` links may go offline over time; the local copies
-  preserve the most important lectures regardless.
+- All lecture and essay texts are hosted locally on this site, so nothing depends on
+  external pages staying online.
